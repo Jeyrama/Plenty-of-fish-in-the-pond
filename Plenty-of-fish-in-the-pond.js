@@ -14,8 +14,8 @@ Task:
   From this you must work out how many fish you can eat and ultimately the size you will grow to.
 
 Rules:
-  1.  Your size starts at 1
-  2.  The shoal string will contain fish integers between 0-9
+  1.  Your size starts at 1.
+  2.  The shoal string will contain fish integers between 0-9.
   3.  0 = algae and wont help you feed.
   4.  The fish integer represents the size of the fish (1-9).
   5.  You can only eat fish the same size or less than yourself.
@@ -45,3 +45,6 @@ Example 2:
   You then eat the remainding 8 fish of size 1 (8 * 1 = 8) which increases your size to 3.
   fish("111111111111") => 3
 */
+
+
+// Solution
