@@ -48,3 +48,15 @@ Example 2:
 
 
 // Solution
+
+function fish(shoal) {
+  let size = 1
+  ,   fish = 0;
+  
+  for (let i = 1; i <= size; i++) {
+    fish += (shoal.split(i).length - 1) * i;
+    size = (Math.sqrt(1 + 2 * fish) + 1) / 2 | 0;
+  }
+
+  return size;
+}
