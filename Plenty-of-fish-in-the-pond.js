@@ -62,3 +62,31 @@ function fish(shoal) {
 }
 
 // or
+
+function fish(shoal){
+  let currentSize = 1;
+  let neededToGrow = 4;
+  let sizeScore = 0;
+  let extraNeeded = 4;
+  let newShoal = shoal.slice();
+
+  function eatAndGrow(shoal) {
+    for(let i = 0; i < shoal.length; i++) {
+      if(currentSize >= parseInt(shoal[i])) {
+      
+        sizeScore += (parseInt(shoal[i]));
+        newShoal = newShoal.replace(shoal[i], '');
+        
+        if(sizeScore >= neededToGrow) {
+          currentSize += 1;
+          extraNeeded += 4;
+          neededToGrow += extraNeeded;
+          return eatAndGrow(newShoal)
+        }
+      }
+    }
+  return currentSize;
+  }
+  
+  return eatAndGrow(shoal);
+}
